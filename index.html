@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA Agri | Premium Farm Fresh Produce</title>
+    <meta name="description" content="GA Agri offers premium green tunnel related products, fresh salad cucumbers, goat milk, farm eggs, green tea, cinnamon, and pepper directly from our natural farm.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f1f8f1',
+                            100: '#def0dd',
+                            500: '#4caf50',
+                            600: '#388e3c',
+                            700: '#2e7d32',
+                            800: '#1b5e20',
+                            900: '#0a3a12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Header Navigation -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-brand-100 py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="bg-brand-600 p-2 rounded-lg group-hover:bg-brand-700 transition-colors">
+                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span class="font-serif text-2xl font-bold text-brand-900 tracking-tight">GA Agri</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-brand-600 font-medium transition-colors">Home</a>
+                    <a href="products.html" class="nav-link text-gray-700 hover:text-brand-600 font-medium transition-colors">Products</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-brand-600 font-medium transition-colors">The Farm</a>
+                    <a href="contact.html" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-lg shadow-brand-500/30 transform hover:-translate-y-0.5 active:translate-y-0">Contact Us</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-600 focus:outline-none p-2 relative">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-brand-100 shadow-xl absolute w-full left-0 top-full pb-4">
+            <div class="px-4 pt-2 space-y-2">
+                <a href="index.html" class="block px-4 py-3 text-gray-800 hover:text-brand-600 hover:bg-brand-50 rounded-xl font-medium transition-colors">Home</a>
+                <a href="products.html" class="block px-4 py-3 text-gray-800 hover:text-brand-600 hover:bg-brand-50 rounded-xl font-medium transition-colors">Products</a>
+                <a href="about.html" class="block px-4 py-3 text-gray-800 hover:text-brand-600 hover:bg-brand-50 rounded-xl font-medium transition-colors">The Farm</a>
+                <a href="contact.html" class="block px-4 py-3 text-brand-700 hover:bg-brand-50 rounded-xl font-bold transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-20">
+            <div class="absolute inset-0 w-full h-full">
+                <!-- Using local image if it exists, otherwise use a placeholder gradient approach -->
+                <img src="./images/hero_farm_view.png" alt="Farm View" class="absolute w-full h-full object-cover object-center">
+                <div class="absolute inset-0 hero-overlay"></div>
+            </div>
+            
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:items-start text-white">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-500/30 backdrop-blur-sm border border-brand-400/50 text-brand-100 font-medium tracking-wide text-sm mb-6 uppercase">Nature's Best, Grown with Love</span>
+                <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif font-bold leading-tight mb-6 max-w-4xl text-white drop-shadow-lg">
+                    Calm, Natural, <br> <span class="text-brand-100 italic">Farm Fresh Produce</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-100 mb-10 max-w-2xl font-light leading-relaxed drop-shadow-md">
+                    Cultivating premium salad cucumbers in our modern green tunnels, and providing the finest goat milk, free-range eggs, and authentic Ceylon spices directly to your table.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <a href="products.html" class="bg-brand-500 hover:bg-brand-600 text-white border border-brand-500 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg shadow-brand-500/40 text-center">
+                        Explore Our Products
+                    </a>
+                    <a href="about.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 text-center">
+                        Discover Our Farm
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <svg class="h-8 w-8 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="py-24 bg-white relative">
+            <!-- Decorative blobs -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 transform translate-x-1/2 -translate-y-1/2"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-brand-600 font-semibold tracking-wide uppercase">Fresh Harvest</h2>
+                    <h3 class="mt-2 text-3xl sm:text-4xl font-serif font-bold text-gray-900">Featured Offerings</h3>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">From our soil to your table, we pride ourselves on quality and freshness.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Product 1 -->
+                    <div class="product-card bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm flex flex-col group h-full">
+                        <div class="h-64 relative image-hover-zoom">
+                            <!-- Using random unsplash veggies as placeholder -->
+                            <img src="./images/fresh_produce.png" alt="Salad Cucumber" class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brand-700 shadow flex items-center gap-1">
+                                <span class="w-2 h-2 rounded-full bg-brand-500 inline-block"></span> Fresh Picked
+                            </div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-sm font-medium text-brand-600 mb-1">Produce</p>
+                                    <h4 class="text-2xl font-serif font-bold text-gray-900 group-hover:text-brand-700 transition-colors">Salad Cucumber</h4>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 flex-grow leading-relaxed">Crisp, refreshing, and grown using sustainable modern methods in our specialized green tunnels.</p>
+                            <a href="products.html" class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link mt-auto">
+                                View Details 
+                                <svg class="ml-2 w-5 h-5 transform group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm flex flex-col group h-full">
+                        <div class="h-64 relative image-hover-zoom">
+                            <img src="./images/spices_herbs.png" alt="Authentic Spices" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-sm font-medium text-brand-600 mb-1">Spices & Herbs</p>
+                                    <h4 class="text-2xl font-serif font-bold text-gray-900 group-hover:text-brand-700 transition-colors">Premium Spices</h4>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 flex-grow leading-relaxed">Authentic Ceylon cinnamon, sharp peppers, and rich green tea in various soothing flavours.</p>
+                            <a href="products.html" class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link mt-auto">
+                                Discover More 
+                                <svg class="ml-2 w-5 h-5 transform group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm flex flex-col group h-full">
+                        <div class="h-64 relative image-hover-zoom bg-gray-100">
+                            <img src="./images/green_tunnel.png" alt="Green Tunnel Tech" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-sm font-medium text-brand-600 mb-1">Equipment</p>
+                                    <h4 class="text-2xl font-serif font-bold text-gray-900 group-hover:text-brand-700 transition-colors">Green Tunnels</h4>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 flex-grow leading-relaxed">We sell complete green tunnel related products and solutions for modern agriculture.</p>
+                            <a href="products.html" class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link mt-auto">
+                                See Equipment 
+                                <svg class="ml-2 w-5 h-5 transform group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <a href="products.html" class="inline-flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-full font-medium transition-all shadow-xl hover:shadow-2xl">
+                        View Full Catalog
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cabana & View Section -->
+        <section class="py-24 bg-brand-900 text-white relative overflow-hidden">
+            <!-- Decorative patterns -->
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-brand-600 rounded-[2rem] transform rotate-3 scale-105 opacity-20 transition-transform group-hover:rotate-6"></div>
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
+                            <img src="./images/hero_farm_view.png" alt="Beautiful landscape view" class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-2xl max-w-xs shadow-xl hidden md:block border-gray-200/20 bg-white/10 text-white backdrop-blur-xl">
+                            <p class="font-serif italic text-lg text-brand-50">"A beautiful view, calm and natural."</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <span class="text-brand-400 font-semibold tracking-wider uppercase text-sm mb-2 block">Coming Soon</span>
+                        <h2 class="text-4xl sm:text-5xl font-serif font-bold mb-6 text-white leading-tight">
+                            The GA <span class="text-white italic font-light">Agri Cabana</span>
+                        </h2>
+                        <p class="text-xl text-gray-300 mb-8 leading-relaxed font-light">
+                            We are expanding our vision to share the breathtaking beauty of our farm. Soon, you will be able to visit and stay in our upcoming cabanas.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center border border-brand-700">
+                                        <svg class="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-white mb-1">Beautiful View</h4>
+                                    <p class="text-gray-400">Wake up to lush greenery, misty mornings, and the absolute tranquility of nature surrounding the farm.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center border border-brand-700">
+                                        <svg class="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-white mb-1">Calm & Natural</h4>
+                                    <p class="text-gray-400">A perfect retreat to disconnect. Experience farm life, fresh produce right off the branch, and pure serenity.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <a href="about.html" class="inline-flex items-center text-brand-300 hover:text-white font-semibold text-lg transition-colors group">
+                                Read our full story
+                                <svg class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand col -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <svg class="h-8 w-8 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="font-serif text-2xl font-bold tracking-tight">GA Agri</span>
+                    </a>
+                    <p class="text-gray-400 leading-relaxed mb-6 border-l-2 border-brand-500 pl-4">
+                        Modern agriculture meets natural beauty. Quality produce, spices, and green tunnel solutions.
+                    </p>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-serif">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-400 transition-colors">Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-brand-400 transition-colors">Our Products</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-brand-400 transition-colors">The Farm</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-brand-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Categories -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-serif">What We Offer</h4>
+                    <ul class="space-y-4">
+                        <li class="text-gray-400">Salad Cucumbers</li>
+                        <li class="text-gray-400">Goat Milk & Eggs</li>
+                        <li class="text-gray-400">Green Tea & Spices</li>
+                        <li class="text-gray-400">Green Tunnel Products</li>
+                        <li class="text-gray-400">Cabana Stay (Coming Soon)</li>
+                    </ul>
+                </div>
+
+                <!-- Contact col -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 font-serif">Contact</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-500 mt-1 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>kosmulla kanda estate, kombala, imaduwa</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-brand-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <a href="tel:0778318143" class="hover:text-brand-400 transition-colors">0778318143</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-brand-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="mailto:dactkumara@gmail.com" class="hover:text-brand-400 transition-colors">dactkumara@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 GA Agri. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
